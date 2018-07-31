@@ -72,11 +72,16 @@ echo "All filters have been imported successfully."
 
 
 echo "Importing signatures..."
+# Need to update sig-import module
+# /opt/zimbra/bin/zmprov csig test@corp.vinay.com test-signature1 zimbraPrefMailSignatureHTML  '<div>TestSig</div>'
 for file in $backup_folder/signatures/*
 do
     StrSign=`cat "$file"`
     Acc=`echo $file | cut -d "/" -f5`
-    $zpath/zmprov ma $Acc zimbraPrefMailSignature '$StrSign'
+    $zpath/zmprov ma $Acc zimbraPrefMailSignatureHTML '$StrSign'
+    sigID=`$zpath/zmprov ga $Acc zimbraSignatureId | grep -v "#" | awk '{print $2}'`
+    $zpath/zmprov ma $Acc zimbraPrefDefaulltSignatureId $sigID
+    $zpath/zmprov ma $Acc zimbraPrefForwardReplySignatureID $sigID
     echo "$Acc --- Restored"
 done
 echo "All signatures have been imported successfully."
