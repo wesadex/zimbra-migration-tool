@@ -29,4 +29,12 @@ Work order:
 3. On new server run zimbra_import.sh as root (or sudo -u zimbra)
 
 
+Based on this manuals:
 
+* https://syslint.com/blog/tutorial/zimbra-server-migration-and-zimbra-account-transfer-the-perfect-method/
+* https://imanudin.net/2015/02/17/how-to-exportimport-filter-on-zimbra-mail-server/
+* https://imanudin.net/2015/02/16/how-to-exportimport-signature-on-zimbra-mail-server/
+* https://wiki.zimbra.com/wiki/Zimbra_Attributes_ZCS8 - attributes of ZCS8
+
+
+Tested on ZCS Network Edtiion 8.0.6 and 8.8.8.
