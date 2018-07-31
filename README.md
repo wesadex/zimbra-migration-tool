@@ -9,9 +9,9 @@ It's good if root access (or sudo) is accessible.
 
 Scripts:
 
-zimbra_export.sh - script for dumping all data into $backup_folder (is set in script) directory.
-zimbra_import.sh - script for importing downloaded by zimbra_export.sh data into new zimbra-server.
-rsync_data.sh - script which must be running on new server to download (sync) exported data from old zimbra-server.
+* zimbra_export.sh - script for dumping all data into $backup_folder (is set in script) directory.
+* zimbra_import.sh - script for importing downloaded by zimbra_export.sh data into new zimbra-server.
+* rsync_data.sh - script which must be running on new server to download (sync) exported data from old zimbra-server.
 
 
 
