@@ -17,9 +17,9 @@ rsync_data.sh - script which must be running on new server to download (sync) ex
 
 Used variables:
 
-backup_folder = "/backups/zmigrate" - folder to store data downloaded from old server and synced to new one.
-zpath = "/opt/zimbra/bin" - path to zimbra binaries, including f.e. zmprov.
-$STY - system variable contains ID of current screen. Good way to detect whether script is running under screen.
+* backup_folder = "/backups/zmigrate" - folder to store data downloaded from old server and synced to new one.
+* zpath = "/opt/zimbra/bin" - path to zimbra binaries, including f.e. zmprov.
+* $STY - system variable contains ID of current screen. Good way to detect whether script is running under screen.
 
 
 Work order:
